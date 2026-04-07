@@ -9,6 +9,7 @@
 - 开源项目 best-practices 调研
 - 示例输出文件
 - 校验脚本
+- GitHub 社区与发布基础设施
 
 ## 核心能力
 
@@ -99,6 +100,14 @@ Use $x-thread-context-capture to turn this X post into a structured-name Markdow
 - 产品需求文档：[docs/prd.zh-CN.md](docs/prd.zh-CN.md)
 - 开源最佳实践调研：[docs/open-source-best-practices.md](docs/open-source-best-practices.md)
 
+## 社区与发布
+
+- 许可证：[LICENSE](LICENSE)
+- 贡献指南：[CONTRIBUTING.md](CONTRIBUTING.md)
+- 安全策略：[SECURITY.md](SECURITY.md)
+- 行为准则：[CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+- GitHub Actions 校验工作流：[.github/workflows/validate.yml](.github/workflows/validate.yml)
+
 ## 示例输出
 
 - [x-thread-context-karpathy-2036836816654147718.md](x-thread-contexts/x-thread-context-karpathy-2036836816654147718.md)
@@ -132,7 +141,8 @@ python3 scripts/validate_skill_repo.py
 
 如果准备正式开源，下一步最值得补的是：
 
-1. 选择并补充开源许可证
-2. 增加 CI，在 PR 中自动跑仓库校验
+1. 将仓库中的示例输出与默认运行输出目录分离
+2. 在 GitHub 仓库设置中启用 private vulnerability reporting
 3. 增加更多真实案例输出作为 examples
-4. 建立 release / changelog 节奏
+4. 建立首个 release，例如 `v0.1.0`
+5. 视发布受众补充英文 README 或双语说明

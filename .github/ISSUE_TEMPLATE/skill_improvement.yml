@@ -1,0 +1,39 @@
+name: Skill improvement
+description: Propose a workflow improvement, output refinement, or new edge-case handling.
+title: "[Improvement] "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What user need, limitation, or gap does this improve?
+      placeholder: Describe the current limitation.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the new behavior, rule, or repository improvement.
+      placeholder: Explain the change in concrete terms.
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Example input or case
+      description: Share an X post, thread shape, or edge case that makes this useful.
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected impact
+      description: How would this improve quality, reliability, or usability?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmations
+      options:
+        - label: I checked the README and docs before opening this request.
+          required: true

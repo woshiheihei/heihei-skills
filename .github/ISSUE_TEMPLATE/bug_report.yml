@@ -1,0 +1,46 @@
+name: Bug report
+description: Report a defect in the skill, docs, validation, or output contract.
+title: "[Bug] "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken, incorrect, or unexpectedly fragile?
+      placeholder: A concise description of the problem.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Share the input, workflow, and steps needed to reproduce it.
+      placeholder: |
+        1. Use this X status URL...
+        2. Run this prompt...
+        3. Observe this behavior...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Paste logs, output snippets, screenshots, or file paths if helpful.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmations
+      options:
+        - label: I checked existing issues and did not find the same report.
+          required: true
+        - label: I removed secrets and personal data from the report.
+          required: true
