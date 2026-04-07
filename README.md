@@ -42,11 +42,7 @@
 
 仓库内的 skill 源码位于：
 
-- [skills/x-thread-context-capture/SKILL.md](/Users/weibao/code/codex/推文爬取/skills/x-thread-context-capture/SKILL.md)
-
-本机已安装版本位于：
-
-- `/Users/weibao/.codex/skills/x-thread-context-capture`
+- [skills/x-thread-context-capture/SKILL.md](skills/x-thread-context-capture/SKILL.md)
 
 发布到 GitHub 时，建议以仓库内 `skills/x-thread-context-capture/` 作为开源源代码的基准版本。
 
@@ -86,13 +82,13 @@ Use $x-thread-context-capture to turn this X post into a structured-name Markdow
 
 ## 文档
 
-- 产品需求文档：[docs/prd.zh-CN.md](/Users/weibao/code/codex/推文爬取/docs/prd.zh-CN.md)
-- 开源最佳实践调研：[docs/open-source-best-practices.md](/Users/weibao/code/codex/推文爬取/docs/open-source-best-practices.md)
+- 产品需求文档：[docs/prd.zh-CN.md](docs/prd.zh-CN.md)
+- 开源最佳实践调研：[docs/open-source-best-practices.md](docs/open-source-best-practices.md)
 
 ## 示例输出
 
-- [x-thread-context-karpathy-2036836816654147718.md](/Users/weibao/code/codex/推文爬取/x-thread-contexts/x-thread-context-karpathy-2036836816654147718.md)
-- [x-thread-context-karpathy-2036841069636370467.md](/Users/weibao/code/codex/推文爬取/x-thread-contexts/x-thread-context-karpathy-2036841069636370467.md)
+- [x-thread-context-karpathy-2036836816654147718.md](x-thread-contexts/x-thread-context-karpathy-2036836816654147718.md)
+- [x-thread-context-karpathy-2036841069636370467.md](x-thread-contexts/x-thread-context-karpathy-2036841069636370467.md)
 
 ## 校验
 
