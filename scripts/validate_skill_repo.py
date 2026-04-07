@@ -54,9 +54,9 @@ def main() -> int:
 
     require(ROOT / "README.md", errors)
     require(ROOT / "AGENTS.md", errors)
+    require(ROOT / ".agents" / "skills" / "x-thread-context-capture", errors)
     require(ROOT / "docs" / "prd.zh-CN.md", errors)
     require(ROOT / "docs" / "open-source-best-practices.md", errors)
-    require(ROOT / "scripts" / "install_skill.sh", errors)
     require(ROOT / "skills" / "x-thread-context-capture" / "SKILL.md", errors)
     require(ROOT / "skills" / "x-thread-context-capture" / "agents" / "openai.yaml", errors)
     require(ROOT / "skills" / "x-thread-context-capture" / "references" / "final-template.md", errors)

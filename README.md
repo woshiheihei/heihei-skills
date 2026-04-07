@@ -8,7 +8,7 @@
 - 产品需求文档
 - 开源项目 best-practices 调研
 - 示例输出文件
-- 安装与校验脚本
+- 校验脚本
 
 ## 核心能力
 
@@ -23,11 +23,13 @@
 .
 ├── AGENTS.md
 ├── README.md
+├── .agents/
+│   └── skills/
+│       └── x-thread-context-capture -> ../../skills/x-thread-context-capture
 ├── docs/
 │   ├── prd.zh-CN.md
 │   └── open-source-best-practices.md
 ├── scripts/
-│   ├── install_skill.sh
 │   └── validate_skill_repo.py
 ├── skills/
 │   └── x-thread-context-capture/
@@ -46,19 +48,31 @@
 
 发布到 GitHub 时，建议以仓库内 `skills/x-thread-context-capture/` 作为开源源代码的基准版本。
 
+为了让 Codex 在仓库内直接发现该 skill，仓库还包含一个 repo-local 入口：
+
+- `.agents/skills/x-thread-context-capture` -> `skills/x-thread-context-capture`
+
 ## 安装
 
-将 skill 安装到默认 Codex skills 目录：
+这个仓库默认不提供平台专属安装脚本，而是优先采用更轻量、也更接近当前 skills 生态的两种方式。
 
-```bash
-bash ./scripts/install_skill.sh
+如果你直接在这个仓库里启动 Codex，通常不需要额外安装。Codex 会扫描仓库内的 `.agents/skills/`，这个 skill 可以被直接发现。
+
+推荐方式：Ask your agent
+
+```text
+Please install the skill from https://github.com/<your-org-or-user>/<repo>/tree/main/skills/x-thread-context-capture
 ```
 
-安装目标默认为：
+如果你在使用 Codex，也可以直接调用原生的 `$skill-installer`：
 
-```bash
-${CODEX_HOME:-$HOME/.codex}/skills/x-thread-context-capture
+```text
+$skill-installer install https://github.com/<your-org-or-user>/<repo>/tree/main/skills/x-thread-context-capture
 ```
+
+这种做法与 `openai/skills` 的官方分发方式一致，也比维护仓库自定义 shell 安装脚本更简单、可移植。
+
+如果目标环境不支持自动安装，再退回手动复制目录即可：将 `skills/x-thread-context-capture/` 放入目标 agent 的 skills 发现目录。
 
 ## 使用方式
 
@@ -104,6 +118,15 @@ python3 scripts/validate_skill_repo.py
 - Skill frontmatter 是否完整
 - 输出目录是否存在
 - README / PRD / 调研文档是否齐全
+
+## 安装策略说明
+
+这份仓库刻意把“安装”设计成文档约定，而不是额外的 shell 封装，原因是：
+
+- Codex 官方支持 repo-local `.agents/skills/` 发现机制，仓库内可以直接暴露 skill
+- `openai/skills` 官方仓库本身就推荐通过 Codex 内置的 `$skill-installer` 从 GitHub 目录安装
+- `baoyu-skills` 这类代表性开源仓库也把 “Ask the Agent” 作为正式安装选项
+- 对公开仓库来说，少一个自定义安装脚本，通常就少一层平台兼容性和维护成本
 
 ## 后续建议
 

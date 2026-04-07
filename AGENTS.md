@@ -7,9 +7,10 @@ This repository packages a production-style Codex skill for capturing model-read
 ## Key directories
 
 - `skills/x-thread-context-capture/`: repository source of truth for the published skill
+- `.agents/skills/`: repo-local discovery entry for Codex
 - `docs/`: PRD and supporting research docs
 - `x-thread-contexts/`: generated Markdown outputs
-- `scripts/`: install and validation utilities
+- `scripts/`: repository validation utilities
 
 ## Conventions
 
