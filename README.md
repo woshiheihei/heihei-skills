@@ -30,6 +30,8 @@
 ├── docs/
 │   ├── prd.zh-CN.md
 │   └── open-source-best-practices.md
+├── examples/
+│   └── *.md
 ├── scripts/
 │   └── validate_skill_repo.py
 ├── skills/
@@ -38,7 +40,7 @@
 │       ├── agents/openai.yaml
 │       └── references/
 └── x-thread-contexts/
-    └── *.md
+    └── .gitkeep
 ```
 
 ## Skill 位置
@@ -110,8 +112,8 @@ Use $x-thread-context-capture to turn this X post into a structured-name Markdow
 
 ## 示例输出
 
-- [x-thread-context-karpathy-2036836816654147718.md](x-thread-contexts/x-thread-context-karpathy-2036836816654147718.md)
-- [x-thread-context-karpathy-2036841069636370467.md](x-thread-contexts/x-thread-context-karpathy-2036841069636370467.md)
+- [x-thread-context-karpathy-2036836816654147718.md](examples/x-thread-context-karpathy-2036836816654147718.md)
+- [x-thread-context-karpathy-2036841069636370467.md](examples/x-thread-context-karpathy-2036841069636370467.md)
 
 ## 校验
 
@@ -125,6 +127,7 @@ python3 scripts/validate_skill_repo.py
 
 - 关键目录是否存在
 - Skill frontmatter 是否完整
+- 示例目录与运行输出目录是否同时存在
 - 输出目录是否存在
 - README / PRD / 调研文档是否齐全
 
@@ -141,8 +144,7 @@ python3 scripts/validate_skill_repo.py
 
 如果准备正式开源，下一步最值得补的是：
 
-1. 将仓库中的示例输出与默认运行输出目录分离
-2. 在 GitHub 仓库设置中启用 private vulnerability reporting
-3. 增加更多真实案例输出作为 examples
-4. 建立首个 release，例如 `v0.1.0`
-5. 视发布受众补充英文 README 或双语说明
+1. 在 GitHub 仓库设置中启用 private vulnerability reporting
+2. 增加更多真实案例输出作为 `examples/`
+3. 建立首个 release，例如 `v0.1.0`
+4. 视发布受众补充英文 README 或双语说明

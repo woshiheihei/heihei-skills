@@ -10,12 +10,14 @@ This repository packages a production-style Codex skill for capturing model-read
 - `.agents/skills/`: repo-local discovery entry for Codex
 - `.github/`: workflow and repository-community templates
 - `docs/`: PRD and supporting research docs
-- `x-thread-contexts/`: generated Markdown outputs
+- `examples/`: reviewed sample outputs committed to the repository
+- `x-thread-contexts/`: local runtime output directory for generated Markdown
 - `scripts/`: repository validation utilities
 
 ## Conventions
 
 - Keep generated thread outputs in `x-thread-contexts/`.
+- Keep committed sample outputs in `examples/`, not in `x-thread-contexts/`.
 - Do not place output Markdown files in the repository root.
 - Keep product and design docs in `docs/`.
 - Keep the open-source copy of the skill in `skills/x-thread-context-capture/`.

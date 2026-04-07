@@ -66,11 +66,13 @@ def main() -> int:
     require(ROOT / ".github" / "pull_request_template.md", errors)
     require(ROOT / "docs" / "prd.zh-CN.md", errors)
     require(ROOT / "docs" / "open-source-best-practices.md", errors)
+    require(ROOT / "examples", errors)
     require(ROOT / "skills" / "x-thread-context-capture" / "SKILL.md", errors)
     require(ROOT / "skills" / "x-thread-context-capture" / "agents" / "openai.yaml", errors)
     require(ROOT / "skills" / "x-thread-context-capture" / "references" / "final-template.md", errors)
     require(ROOT / "skills" / "x-thread-context-capture" / "references" / "selection-rubric.md", errors)
     require(ROOT / "x-thread-contexts", errors)
+    require(ROOT / "x-thread-contexts" / ".gitkeep", errors)
 
     skill_md = ROOT / "skills" / "x-thread-context-capture" / "SKILL.md"
     if skill_md.exists():

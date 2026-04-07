@@ -129,12 +129,13 @@ OpenAI 在 Codex 最佳实践中明确建议维护 `AGENTS.md`，用来承载命
 实践要点：
 
 - docs 与 outputs 分离
-- examples / outputs 有固定目录
+- reviewed examples 与 runtime outputs 也应分离
 - 文件名应结构化、可检索
 
 对本仓库的启发：
 
-- 输出目录统一为 `x-thread-contexts/`
+- 示例输出统一为 `examples/`
+- 运行输出统一为 `x-thread-contexts/`
 - 产物命名统一为 `x-thread-context-<author_handle>-<root_status_id>.md`
 
 ### 7. 面向公开发布时，应提供安装、验证和维护入口
@@ -160,8 +161,9 @@ OpenAI 在 Codex 最佳实践中明确建议维护 `AGENTS.md`，用来承载命
 4. 增加仓库级 `AGENTS.md`
 5. 将安装方式改为 README 驱动
 6. 增加校验脚本
-7. 将输出集中到 `x-thread-contexts/`
+7. 将运行输出集中到 `x-thread-contexts/`
 8. 为 Codex 增加 repo-local `.agents/skills/` 入口
+9. 将仓库示例集中到 `examples/`
 
 ## 下一步建议
 

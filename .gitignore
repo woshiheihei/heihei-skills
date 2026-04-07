@@ -1,1 +1,3 @@
 .DS_Store
+x-thread-contexts/*.md
+!x-thread-contexts/.gitkeep
