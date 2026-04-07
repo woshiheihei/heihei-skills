@@ -1,0 +1,4 @@
+interface:
+  display_name: "X Thread Context Capture"
+  short_description: "Build model-ready X thread research packs"
+  default_prompt: "Use $x-thread-context-capture to turn this X post into a structured-name Markdown research context pack saved under cwd/x-thread-contexts/."
